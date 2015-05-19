@@ -1,0 +1,45 @@
+.logo{
+	 margin-bottom:15px;
+	 margin-top:15px;
+	height : 72px;
+	width : 103px;
+	background-image: url("../images/logo.jpg");
+	background-size:cover;
+	 
+	display: block;
+}
+
+
+.welcomeImage{
+	height: 200px;
+	background-image: url("../images/back.jpg");
+	background-size:cover;
+	background-position: top left;
+	
+}
+
+.menue ul {
+	margin:0px;
+	
+	float: left;
+	
+}
+
+.menue li{
+	float: left;
+	list-style:none;
+	margin-right:40px; 
+	margin-top: 40px;
+}
+
+.vorstandImage{
+	border: 1px solid #ddd;
+	width: 100%;
+	min-height: 350px;
+	background-image: url("/WebEngineering/images/vorstand.jpg");
+	background-position: center top;
+	background-size:cover;
+}
+
+
+
