@@ -1,0 +1,57 @@
+html, body{
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper, .height100 {
+	
+	height: 100%;
+	
+}
+
+
+.welcomeImage{
+	background-image: url("../images/back.jpg");
+	background-size:cover;
+	background-position: center center;
+}
+
+.logo{
+	height : 144px;
+	width : 207px;
+	background-image: url("../images/logo.jpg");
+	background-size:cover;
+	margin: auto;
+	display: block;
+}
+
+
+
+.menue{
+	color:#fff;
+	margin-top: 140px;
+	margin-left: 64px;
+	list-style: none;
+}
+
+.menue li{
+	padding: 12px 0px;
+	}
+
+
+.menue a{
+	color:#fff;
+	font-weight: 300;
+	font-size: 46px
+	}
+	 
+	
+.menue a:hover{
+	text-decoration: none;
+	color:#01a6de;
+	}	
+
+.menue a:hover,  .menue a:visited, .menue a:link,  .menue a:focus {
+	text-decoration: none;
+	}		
+	
