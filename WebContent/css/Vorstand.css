@@ -42,4 +42,12 @@
 }
 
 
+.formId{
+	margin-bottom: 15px !important;
+}
+
+
+.formId, .formId input{
+	width: 100% !important;
+}
 

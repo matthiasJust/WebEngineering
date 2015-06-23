@@ -1,97 +1,96 @@
 package WebEngineering;
 
-import java.util.Date;
+import java.util.*;
 
 public class KontaktBean {
 
-	private String Name;
-	private String Vorname;
-	private String Mail;
-	private String Headline;
-	private Date Datum;
-	private String Nachricht;
+	private String id;
+	private String name;
+	private String vorname;
+	private String mail;
+	private String headline;
+	private String datum;
+	private String nachricht;
 	
-	public KontaktBean(String Name, String Vorname, String Mail, String Headline, Date Datum, String Nachricht) {
-		  
-		this.Name = Name;
-		this.Vorname = Vorname;
-		this.Mail = Mail;
-		this.Headline = Headline;
-		this.Datum = Datum;
-		this.Nachricht = Nachricht;
-		
+	public KontaktBean() {
+    }
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
-	
-	
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 
 
 	public String getVorname() {
-		return Vorname;
+		return vorname;
 	}
 
 
 
 	public void setVorname(String vorname) {
-		Vorname = vorname;
+		this.vorname = vorname;
 	}
 
 
 
 	public String getMail() {
-		return Mail;
+		return mail;
 	}
 
 
 
 	public void setMail(String mail) {
-		Mail = mail;
+		this.mail = mail;
 	}
 
 
 
 	public String getHeadline() {
-		return Headline;
+		return headline;
 	}
 
 
 
 	public void setHeadline(String headline) {
-		Headline = headline;
+		this.headline = headline;
 	}
 
 
 
-	public Date getDatum() {
-		return Datum;
+	public String getDatum() {
+		return datum;
 	}
 
 
 
-	public void setDatum(Date datum) {
-		Datum = datum;
+	public void setDatum(String datum) {
+		this.datum = datum;
 	}
 
 
 
 	public String getNachricht() {
-		return Nachricht;
+		return nachricht;
 	}
 
 
 
 	public void setNachricht(String nachricht) {
-		Nachricht = nachricht;
+		this.nachricht = nachricht;
 	}
  
 	

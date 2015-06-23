@@ -12,3 +12,4 @@ aaa
 <%= new Date() %>
 </body>
 </html>
+
