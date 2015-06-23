@@ -54,11 +54,12 @@ public class DisplayNews extends HttpServlet {
   	  test.setHeadline(request.getParameter("headline"));
   	  test.setNachricht(request.getParameter("nachricht"));
   	    
-  	  //  KontaktBean.add(new KontaktBean(id, vorname,name,mail, headline,new Date(), nachricht));
+  	  KontaktBean.add(test);
   	
   	  HttpSession session = request.getSession(); 
-  	  session.setAttribute("meineBean", test);
+  	  session.setAttribute("meineBean", KontaktBean);
   	  
+  	
 		  
 		  RequestDispatcher requestDispatcher; 
 		  requestDispatcher = request.getRequestDispatcher("/NewsList.jsp");
