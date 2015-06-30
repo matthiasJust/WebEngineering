@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head> 
-	<%@ include file="../Templates/PageHead.jsp" %>
+	<%@ include file="Templates/PageHead.jsp" %>
 </head>
 <body>
 
 	<div class="container-fluid wrapper">
 			
-			<%@ include file="../Templates/PageHeader.jsp" %>
+			<%@ include file="Templates/PageHeader.jsp" %>
 		
 			<div class="row">
 			

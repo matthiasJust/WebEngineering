@@ -18,8 +18,8 @@ import javax.servlet.http.HttpSession;
 public class DisplayNews extends HttpServlet {
 	 
 	private static final long serialVersionUID = 1L;
-	private static LinkedList<KontaktBean> KontaktBean;
-	static  KontaktBean test;
+	public static LinkedList<KontaktBean> KontaktBean;
+	public static  KontaktBean test;
 	
 	
     /**
@@ -44,7 +44,7 @@ public class DisplayNews extends HttpServlet {
 
     private void DoProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
     	 
-    	test = new KontaktBean();
+    	KontaktBean test = new KontaktBean();
   	   
   	  test.setId(request.getParameter("id"));
   	  test.setVorname(request.getParameter("vorname"));

@@ -1,72 +1,55 @@
+<%@page import="java.time.DateTimeException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page session="true" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="WebEngineering.*"%>
+<%@ page import="java.util.Date"%>
+<%@ page import="java.util.LinkedList"%>
+
+
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head> 
-	<%@ include file="../Templates/PageHead.jsp" %>
+	<%@ include file="Templates/PageHead.jsp" %>
 </head>
 <body>
 
 	<div class="container-fluid wrapper">
 		
-		<%@ include file="../Templates/PageHeader.jsp" %>
+		<%@ include file="Templates/PageHeader.jsp" %>
  
 		<div class="row">
 		 
 			<article class="col-md-offset-1 col-md-10">
 
 
-					<jsp:useBean id="meineBean" class="WebEngineering.KontaktBean" scope="session" />
- 				 	
- 				 	
- 				 	
- 				 	<c:forEach var="item" items="${meineBean}">
-		 				 
-		 				  
-		  				<h1>${item.headline}</h1>
-						<address>
-							<span>Autor:</span> 
-							<span>  ${item.vorname}, ${item.name}</span> <br /> 
-							
-							<span>Mail:</span>
-							<a href="mailto:Lisa@müller.de"> ${item.mail}</a><br /> 
-							
-							<span>Datum:</span> 
-							<span> ${item.datum}</span><br />
-						</address>
-		
-						<p> ${item.nachricht}</p>
-							<a href="/WebEngineering/NewsDetails.jsp?id= ${item.id}">Link zum Artikel</a>
-						<hr />
-			
- 				 	
- 				 	</c:forEach>
- 				 	
- 				 	
- 				 	
- 				 	
- 				 	
- 				 	
- 			<!-- 	<h1><jsp:getProperty name="meineBean" property="headline" /></h1>
-						<address>
-							<span>Autor:</span> 
-							<span><jsp:getProperty name="meineBean" property="vorname" />,  <jsp:getProperty name="meineBean" property="name" /></span> <br /> 
-							
-							<span>Mail:</span>
-							<a href="mailto:Lisa@müller.de"><jsp:getProperty name="meineBean" property="mail" /></a><br /> 
-							
-							<span>Datum:</span> 
-							<span><jsp:getProperty name="meineBean" property="datum" /></span><br />
-						</address>
-		
-						<p><jsp:getProperty name="meineBean" property="nachricht" /></p>
-							<a href="/WebEngineering/NewsDetails.jsp?id=<jsp:getProperty name="meineBean" property="id" />">Link zum Artikel</a>
-						<hr />
- 				 	
- 				 	 -->
+		 
+ 				 	 
+ 			 
+ 			<%  
+ 			 
+ 			for(KontaktBean elem : DisplayNews.KontaktBean){
+ 				
+ 				out.write("<h1>" + elem.getHeadline() + "</h1>");
+ 				out.write("<address>");
+ 				out.write("<span>Autor:</span>");
+ 				out.write("<span>" + elem.getVorname() + "," + elem.getName() +   "</span> <br /> ");
+ 				out.write("<span>Mail:</span>");
+ 				out.write("<a href='mailto: " + elem.getMail() + "'>" +  elem.getMail()  + "</a><br /> ");
+ 				out.write("<span>Datum:</span>");
+ 				out.write("<span>" +  elem.getDatum() + "</span><br />");
+ 				out.write("</address>");
+ 				
+ 				out.write("<p>" +  elem.getNachricht() +  "</p>");
+ 				out.write("<a href='/WebEngineering/NewsDetails?id=" + elem.getId() + " '>Link zum Artikel</a>");
+ 				out.write("<hr />");
+ 			
+ 			}			
+ 			%>
+ 			 
+ 		 
+ 				 	  
   				
 			
 			 
